@@ -13,6 +13,9 @@ public class MainPage extends PageObject {
     @FindBy(id="location")
     private WebElement searchLocation;
 
+    @FindBy(id="search-button")
+    private WebElement searchButton;
+
 
     // constructor goes here
     public MainPage(WebDriver driver) {
@@ -30,6 +33,8 @@ public class MainPage extends PageObject {
 
         this.searchLocation.clear();
         this.searchLocation.sendKeys(location);
+
+        this.searchButton.click();
     }
 
 }
